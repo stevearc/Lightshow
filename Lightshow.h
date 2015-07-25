@@ -1,10 +1,12 @@
 // controllers
-#include "controllers/rainbow.h"
-#include "controllers/rainbow_strobe.h"
-#include "controllers/color_strobe.h"
-#include "controllers/bling.h"
-#include "controllers/blink.h"
 #include "controllers/cycle.h"
+#include "controllers/strobe.h"
+
+#include "managers/rainbow_strobe.h"
+#include "managers/color_strobe.h"
+#include "managers/rainbow.h"
+#include "managers/bling.h"
+#include "managers/blink.h"
 
 // dimmers
 #include "dimmers/breathe.h"

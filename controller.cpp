@@ -5,9 +5,6 @@ void Controller::setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b) {
 }
 
 void Controller::setPixelColor(uint16_t n, uint8_t r, uint8_t g, uint8_t b, uint8_t manualBrightness) {
-  if (not controlsPixel(n)) {
-    return;
-  }
   r = (r * manualBrightness) >> 8;
   g = (g * manualBrightness) >> 8;
   b = (b * manualBrightness) >> 8;

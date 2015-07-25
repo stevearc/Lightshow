@@ -1,19 +1,19 @@
 #include "controller.h"
-#include "button.h"
+#include "util/button.h"
 
 #ifndef CYCLE_H
 #define CYCLE_H
 
-class Cycle : public Controller {
+class CycleController : public Controller {
 public:
-  Cycle(Controller *controllers[], uint8_t numControllers, uint32_t transitionTime = 10000, int8_t nextPin = -1)
+  CycleController(Controller *controllers[], uint8_t numControllers, uint32_t transitionTime = 10000, int8_t nextPin = -1)
   : controllers(controllers), numControllers(numControllers), transitionTime(transitionTime) {
     if (nextPin >= 0) {
       nextBtn = new Button(nextPin);
     }
   }
 
-  ~Cycle() {
+  ~CycleController() {
     if (nextBtn) {
       delete nextBtn;
       nextBtn = 0;
